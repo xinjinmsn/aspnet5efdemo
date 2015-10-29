@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "Echo";
+}
+
+<ul>
+    <!-- Loop through each record that was returned -->
+    @foreach (var item in Model)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+

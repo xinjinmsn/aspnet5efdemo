@@ -49,16 +49,16 @@ namespace ASPNET5EFDemo
            {
                config.MapRoute(
                    name:"Default",
-                   template:"",
-                   defaults: new { controller="App", action ="Index"});
+                   template:"{controller}/{action}/{id?}",
+                   defaults: new { controller="Home", action ="Index"});
            });
 
             seeder.EnsureSeedData();
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
         }
     }
 }
