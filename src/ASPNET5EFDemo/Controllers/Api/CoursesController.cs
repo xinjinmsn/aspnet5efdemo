@@ -35,8 +35,10 @@ namespace ASPNET5EFDemo.Controllers.Api
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public JsonResult Post([FromBody]string value)
         {
+            var courses = _repository.GetAllCourses();
+            return Json(courses);
         }
 
         // PUT api/values/5
