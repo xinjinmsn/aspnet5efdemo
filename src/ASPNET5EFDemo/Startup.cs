@@ -43,16 +43,22 @@ namespace ASPNET5EFDemo
             services.AddScoped<ICourseRepository, CourseRepository>();
 
             //Add Cors support to the service
+            //services.AddCors();
+
+            //var policy = new CorsPolicy();
+
+            //policy.Headers.Add("*");
+            //policy.Methods.Add("*");
+            //policy.Origins.Add("*");
+            //policy.SupportsCredentials = true;
+
+            //services.ConfigureCors(x => x.AddPolicy("mypolicy", policy));
+
             services.AddCors();
-
-            var policy = new CorsPolicy();
-
-            policy.Headers.Add("*");
-            policy.Methods.Add("*");
-            policy.Origins.Add("*");
-            policy.SupportsCredentials = true;
-
-            services.ConfigureCors(x => x.AddPolicy("mypolicy", policy));
+            services.ConfigureCors(options =>
+                                    options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                        .AllowAnyMethod()
+                                                                        .AllowAnyHeader()));
 
         }
 

@@ -187,10 +187,12 @@
           "lib/dnx451/Microsoft.AspNet.Authorization.dll": {}
         }
       },
-      "Microsoft.AspNet.Cors/6.0.0-beta8": {
+      "Microsoft.AspNet.Cors/1.0.0-beta6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Cors.Core": "6.0.0-beta8"
+          "Microsoft.AspNet.Cors.Core": "1.0.0-beta6",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-beta6",
+          "Microsoft.AspNet.WebUtilities": "1.0.0-beta6"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1713,10 +1715,13 @@
           "lib/dnxcore50/Microsoft.AspNet.Authorization.dll": {}
         }
       },
-      "Microsoft.AspNet.Cors/6.0.0-beta8": {
+      "Microsoft.AspNet.Cors/1.0.0-beta6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Cors.Core": "6.0.0-beta8"
+          "Microsoft.AspNet.Cors.Core": "1.0.0-beta6",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-beta6",
+          "Microsoft.AspNet.WebUtilities": "1.0.0-beta6",
+          "System.Runtime": "4.0.20-beta-23109"
         },
         "compile": {
           "lib/dnxcore50/Microsoft.AspNet.Cors.dll": {}
@@ -4391,18 +4396,19 @@
         "repo.json"
       ]
     },
-    "Microsoft.AspNet.Cors/6.0.0-beta8": {
+    "Microsoft.AspNet.Cors/1.0.0-beta6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "tHsx3+OCkpnLqImpgmfz/QU4cGjofuCvVSX/kMRuUBlEo6MnDtyjQZzyV6lnZzZzBejU5oOmiP8zFAsWVsBh8g==",
+      "sha512": "vhxP84BPOvKI50FttrP6pvaDkLlZRvqTDPRDj1qhrnqRVajZlLS0vJnUt43I9j5rnN28zxOUZ5TRfgBA0P4zIw==",
       "files": [
         "lib/dnx451/Microsoft.AspNet.Cors.dll",
         "lib/dnx451/Microsoft.AspNet.Cors.xml",
         "lib/dnxcore50/Microsoft.AspNet.Cors.dll",
         "lib/dnxcore50/Microsoft.AspNet.Cors.xml",
-        "Microsoft.AspNet.Cors.6.0.0-beta8.nupkg",
-        "Microsoft.AspNet.Cors.6.0.0-beta8.nupkg.sha512",
-        "Microsoft.AspNet.Cors.nuspec"
+        "Microsoft.AspNet.Cors.1.0.0-beta6.nupkg",
+        "Microsoft.AspNet.Cors.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.AspNet.Cors.nuspec",
+        "repo.json"
       ]
     },
     "Microsoft.AspNet.Cors.Core/1.0.0-beta7": {
@@ -7356,16 +7362,15 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.AspNet.Server.IIS >= 1.0.0-beta7",
-      "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta7",
-      "Microsoft.AspNet.StaticFiles >= 1.0.0-beta7",
-      "Microsoft.AspNet.Mvc >= 6.0.0-beta7",
-      "Microsoft.AspNet.Cors.Core >= 1.0.0-beta7",
-      "Microsoft.AspNet.Cors >= 6.0.0-beta8",
-      "Microsoft.Framework.Configuration.Json >= 1.0.0-beta7",
+      "EntityFramework.Commands >= 7.0.0-beta7",
       "EntityFramework.Core >= 7.0.0-beta7",
       "EntityFramework.SqlServer >= 7.0.0-beta7",
-      "EntityFramework.Commands >= 7.0.0-beta7"
+      "Microsoft.AspNet.Mvc >= 6.0.0-beta7",
+      "Microsoft.AspNet.Server.IIS >= 1.0.0-beta7",
+      "Microsoft.AspNet.Cors >= 1.0.0-beta6",
+      "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta7",
+      "Microsoft.AspNet.StaticFiles >= 1.0.0-beta7",
+      "Microsoft.Framework.Configuration.Json >= 1.0.0-beta7"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
