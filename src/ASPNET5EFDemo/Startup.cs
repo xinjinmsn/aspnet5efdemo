@@ -67,7 +67,7 @@ namespace ASPNET5EFDemo
             app.UseStaticFiles();
 
             //Use the new policy globally
-            app.UseCors("mypolicy");
+            app.UseCors("AllowAll");
 
             app.UseMvc(config =>
            {
