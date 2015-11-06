@@ -187,6 +187,24 @@
           "lib/dnx451/Microsoft.AspNet.Authorization.dll": {}
         }
       },
+      "Microsoft.AspNet.Cors/6.0.0-beta8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Cors.Core": "6.0.0-beta8"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.Cors.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.Cors.dll": {}
+        }
+      },
       "Microsoft.AspNet.Cors.Core/1.0.0-beta7": {
         "type": "package",
         "dependencies": {
@@ -1693,6 +1711,18 @@
         },
         "runtime": {
           "lib/dnxcore50/Microsoft.AspNet.Authorization.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Cors/6.0.0-beta8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Cors.Core": "6.0.0-beta8"
+        },
+        "compile": {
+          "lib/dnxcore50/Microsoft.AspNet.Cors.dll": {}
+        },
+        "runtime": {
+          "lib/dnxcore50/Microsoft.AspNet.Cors.dll": {}
         }
       },
       "Microsoft.AspNet.Cors.Core/1.0.0-beta7": {
@@ -4359,6 +4389,20 @@
         "Microsoft.AspNet.Authorization.1.0.0-beta7.nupkg.sha512",
         "Microsoft.AspNet.Authorization.nuspec",
         "repo.json"
+      ]
+    },
+    "Microsoft.AspNet.Cors/6.0.0-beta8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "tHsx3+OCkpnLqImpgmfz/QU4cGjofuCvVSX/kMRuUBlEo6MnDtyjQZzyV6lnZzZzBejU5oOmiP8zFAsWVsBh8g==",
+      "files": [
+        "lib/dnx451/Microsoft.AspNet.Cors.dll",
+        "lib/dnx451/Microsoft.AspNet.Cors.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Cors.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Cors.xml",
+        "Microsoft.AspNet.Cors.6.0.0-beta8.nupkg",
+        "Microsoft.AspNet.Cors.6.0.0-beta8.nupkg.sha512",
+        "Microsoft.AspNet.Cors.nuspec"
       ]
     },
     "Microsoft.AspNet.Cors.Core/1.0.0-beta7": {
@@ -7316,6 +7360,8 @@
       "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta7",
       "Microsoft.AspNet.StaticFiles >= 1.0.0-beta7",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta7",
+      "Microsoft.AspNet.Cors.Core >= 1.0.0-beta7",
+      "Microsoft.AspNet.Cors >= 6.0.0-beta8",
       "Microsoft.Framework.Configuration.Json >= 1.0.0-beta7",
       "EntityFramework.Core >= 7.0.0-beta7",
       "EntityFramework.SqlServer >= 7.0.0-beta7",

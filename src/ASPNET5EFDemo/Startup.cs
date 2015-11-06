@@ -9,6 +9,7 @@ using Microsoft.Framework.Configuration;
 using Microsoft.Dnx.Runtime;
 using ASPNET5EFDemo.Models;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNet.Cors.Core;
 
 namespace ASPNET5EFDemo
 {
@@ -26,6 +27,8 @@ namespace ASPNET5EFDemo
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddMvc()
                 .AddJsonOptions(opt=> {
                     opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
@@ -39,11 +42,26 @@ namespace ASPNET5EFDemo
             services.AddTransient<CourseContextSeedData>();
             services.AddScoped<ICourseRepository, CourseRepository>();
 
+            //Add Cors support to the service
+            services.AddCors();
+
+            var policy = new CorsPolicy();
+
+            policy.Headers.Add("*");
+            policy.Methods.Add("*");
+            policy.Origins.Add("*");
+            policy.SupportsCredentials = true;
+
+            services.ConfigureCors(x => x.AddPolicy("mypolicy", policy));
+
         }
 
         public void Configure(IApplicationBuilder app, CourseContextSeedData seeder)
         {
             app.UseStaticFiles();
+
+            //Use the new policy globally
+            app.UseCors("mypolicy");
 
             app.UseMvc(config =>
            {
