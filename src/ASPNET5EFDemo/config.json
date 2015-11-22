@@ -1,5 +1,9 @@
 ﻿{
   "Data": {
     "CourseContextConnection": "Server=(localdb)\\ProjectsV12;Database=TheCourseDb;Trusted_Connection=yes;MultipleActiveResultSets=yes;"
-  }
+  },
+
+   "AppSettings": {
+    "SiteEmailAddress": "me@microsoft.com"
+  }	
 }

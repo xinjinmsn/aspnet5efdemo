@@ -10,6 +10,7 @@ using Microsoft.Dnx.Runtime;
 using ASPNET5EFDemo.Models;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNet.Cors.Core;
+using ASPNET5EFDemo.Services;
 
 namespace ASPNET5EFDemo
 {
@@ -34,6 +35,12 @@ namespace ASPNET5EFDemo
                     opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
                 });
+
+#if DEBUG
+            services.AddScoped<IMailService, DebugMailService>();
+#else
+            services.AddScoped<IMailService, MailService>();
+#endif
 
             services.AddEntityFramework()
                 .AddSqlServer()
@@ -74,7 +81,7 @@ namespace ASPNET5EFDemo
                config.MapRoute(
                    name:"Default",
                    template:"{controller}/{action}/{id?}",
-                   defaults: new { controller="Home", action ="Index"});
+                   defaults: new { controller="App", action ="Index"});
            });
 
             seeder.EnsureSeedData();

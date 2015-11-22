@@ -8,6 +8,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace ASPNET5EFDemo.Controllers.Web
 {
+   
     public class HomeController : Controller
     {
         // GET: /<controller>/
